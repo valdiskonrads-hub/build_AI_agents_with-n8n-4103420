@@ -48,7 +48,7 @@
     {
       "parameters": {
         "name": "quote_file_generator",
-        "description": "Call this tool to create a quotation document and return a link to a quote file once all required information is gathered. \n\nExpected input example:\n\n{\n    \"type\": \"inline\",\n    \"size_sqft\": 100,\n    \"price_per_sqft\": 55,\n    \"registration_fee\": 800,\n    \"subtotal\": 5500,\n    \"total\": 6300,\n    \"client_name\": \"Acme Industries\",\n    \"client_company\": \"Acme Corp\",\n    \"client_email\": \"contact@acmecorp.com\",\n    \"client_phone\": \"(555) 123-4567\"\n }",
+        "description": "Call this tool to create a quotation document and return a link to a quote file once all required information is gathered.\n\nRequired information:\n- type\n- size_sqft\n- price_per_sqft\n- registration_fee\n- subtotal\n- total\n- client_name\n- client_company\n- client_email\n- client_phone",
         "workflowId": {
           "__rl": true,
           "value": "pWXusXvMjVJStwWE",
@@ -179,7 +179,7 @@
     {
       "parameters": {
         "descriptionType": "manual",
-        "toolDescription": "Store a draft of the email so a sales agent can double check and send it out.",
+        "toolDescription": "Use this to store an email draft to a client so a sales agent can review it, or save a draft for a sales team member to follow up with the client personally.",
         "resource": "draft",
         "subject": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Subject', ``, 'string') }}",
         "emailType": "html",
@@ -191,7 +191,7 @@
       "type": "n8n-nodes-base.gmailTool",
       "typeVersion": 2.1,
       "position": [
-        208,
+        192,
         256
       ],
       "id": "c03796c6-3fb1-4a3d-a600-ad0043537a9a",
@@ -227,7 +227,7 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
       "typeVersion": 1,
       "position": [
-        -480,
+        -496,
         256
       ],
       "id": "7304bcdb-458a-4957-9ea1-a7d7856c45e8",
@@ -388,7 +388,7 @@
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "5ffd065e-5ae0-49f1-9a49-3de6d795dce2",
+  "versionId": "5ba66fda-596f-4828-80d0-9351983c72ba",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "94e1edcc34a91a151fc2ec1b99597068a304e37fdb946fc806f00f97776fce3a"
